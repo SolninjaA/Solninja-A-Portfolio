@@ -6,12 +6,26 @@
     <title>Solninja A - Portfolio | Art Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="\css\style.css">
+    <script>
+        var isNS = (navigator.appName == "Netscape") ? 1 : 0;
+        if(navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN||Event.MOUSEUP);
+        function mischandler(){
+        return false;
+        }
+        function mousehandler(e){
+        var myevent = (isNS) ? e : event;
+        var eventbutton = (isNS) ? myevent.which : myevent.button;
+        if((eventbutton==2)||(eventbutton==3)) return false;
+        }
+        document.oncontextmenu = mischandler;
+        document.onmousedown = mousehandler;
+        document.onmouseup = mousehandler;
+        </script>
 </head>
 <body>
     <ul>
-        <li><a class="active" href="index.html">Home</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a class="active" href="\home\">Home</a></li>
+        <li><a href="\home\index.html#portfolio">Portfolio</a></li>
       </ul>
 <header>
     <a name="home">&nbsp;</a>
@@ -31,8 +45,66 @@
 <div class="big">
 <h1>MY ART</h1>
 </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">ss</button>
+<div class="caption">
+<h3>Note that you can not right-click because I don't want you stealing my art.</h3>
+</div>
+<h1>#1 The Adventures of Mala</h1>
+  <img src="\Really Good Drawings\The Adventures Of Mala.png" alt="The Adventures of Mala">
+<h1>#2 Abstract Art</h1>
+  <img src="\Really Good Drawings\Abstract Art.png" alt="Abstract Art">
+<h1>#3 Cat in a House</h1>
+  <img src="\Really Good Drawings\Cat in a House.png">
+<h1>#4 Teacher</h1>
+  <img src="\Really Good Drawings\For Rachel.png">
+<h1>#5 Computer Mouse</h1>
+  <img src="\Really Good Drawings\Mouse.png">
+<h1>#6 My Dog (Ruggy)</h1>
+  <img src="\Really Good Drawings\Ruggy.png">
+<h1>#7 Uncomfortable Girl (my first drawing on my drawing tablet)</h1>
+  <img src="\Really Good Drawings\uncomfortable girl.png">
+<h1>#8 My Dad</h1>
+  <img src="\Really Good Drawings\Dad Censored Name.png">
+  <br>
+<h1>#9 Bouncing Ball (animation)</h1>
+  <img src="\Really Good Drawings\Animate-Bouncing-Ball.gif">
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <script>
+    //Get the button
+    var mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
 
-<img src="\Really Good Drawings\">
+<footer>
+    
+    <p>&copy; Solninja A - Portfolio | All rights reserved</p>
+    <p>Made with <font color="red">❤</font> by <a target="_blank" id="no-formats-white" href="https://www.youtube.com/c/SolninjaA">Solninja A (me)</a></p>
+
+</footer>
 </main>
 </body>
 </html>
