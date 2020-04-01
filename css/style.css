@@ -75,7 +75,11 @@ ul {
   }
   
   .active {
-    background-color: rgb(231, 142, 172);
+    background-color: rgb(219, 133, 201);
+  }
+
+  .active:hover {
+    background-color: rgb(148, 58, 129);
   }
 
   .anchor-link {
@@ -107,7 +111,7 @@ ul {
   #myBtn {
     display: none;
     position: fixed;
-    bottom: 160px;
+    bottom: 240px;
     width: 100px;
     height: 100px;
     size: 100px;
@@ -126,16 +130,82 @@ ul {
   }
   
   #myBtn:hover {
-    background-color: #555;
+    background-image: url(https://www.solninjaa.com/img/go_to_top_hover.png);
   }
 
-  footer {
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(2px, 3px) rotate(0deg); }
+    20% { transform: translate(5px, 1px) rotate(0deg); }
+    30% { transform: translate(2px, 1px) rotate(0deg); }
+    40% { transform: translate(7px, 1px) rotate(3deg); }
+    50% { transform: translate(1px, 1px) rotate(0deg); }
+    60% { transform: translate(1px, 1px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(0deg); }
+    80% { transform: translate(1px, 1px) rotate(0deg); }
+    90% { transform: translate(1px, 1px) rotate(0deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg); }
+  }
+
+  footer { 
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
+    margin-top: -200px;
     background-color: #333;
     color: white;
     text-align: center;
     padding: 15px;
+    clear: both;
   }
+
+/* Hover Effect */
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.black {
+  color: black;
+  display: none;
+}
+
+.black:hover {
+  display: block;
+}

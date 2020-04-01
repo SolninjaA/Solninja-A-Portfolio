@@ -3,10 +3,11 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://solninjaa.github.io/Solninja-A-Portfolio/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Solninja A - Portfolio | Home</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -35,7 +36,9 @@
         <br>
         <h1>Welcome to Solninja A - Portfolio!</h1>
         <h1>This is my portfolio. It has all my work, although, this is mainly for my art.</h1>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">ss</button>
+
+        <button onmouseover="showFunction()" onclick="topFunction()" id="myBtn" title="Go to top"><div class="black"></div></button>
+
         <img src="scrolling_animation_transparent_cropped.gif">
         <div class="big">
             <a name="portfolio">&nbsp;</a>
@@ -73,17 +76,21 @@
                 }
             }
 
+
             // When the user clicks on the button, scroll to the top of the document
             function topFunction() {
                 document.body.scrollTop = 0;
                 document.documentElement.scrollTop = 0;
             }
         </script>
+
         <footer>
 
             <p>&copy; Solninja A - Portfolio | All rights reserved</p>
             <p>Made with <font color="red">❤</font> by <a target="_blank" id="no-formats-white"
                     href="https://www.youtube.com/c/SolninjaA">Solninja A (me)</a></p>
+                    <p>QUICK LINKS<br>-----------------------------</p>
+                    <p><a id="no-formats-white" href="\home\">Home</a> &diams; <a id="no-formats-white" href="\home#portfolio">Portfolio</a></p>
 
         </footer>
 
